@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "twincatstudio.io.protobufandroid.protobuf";
+option java_outer_classname = "ProtoResponse";
+
+import "Person.proto";
+
+message Response {
+    required bool success = 1;
+    optional string reason = 2;
+    repeated Person participants = 3;
+};

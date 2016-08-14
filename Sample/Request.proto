@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+option java_package = "twincatstudio.io.protobufandroid.protobuf";
+option java_outer_classname = "ProtoRequest";
+
+import "Person.proto";
+
+message Request {
+    enum RequestType {
+        REGISTER = 1;
+        GET_PARTICIPANT = 2;
+    };
+
+    message RegisterInfo {
+        required Person person = 1;
+        optional bool first_time = 2;
+    };
+
+    required RequestType type = 1;
+    optional RegisterInfo register_info = 2;
+};

@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+option java_package = "twincatstudio.io.pokedex.protobuf";
+option java_outer_classname = "ProtoPokedex";
+
+message Evolution {
+    required string     num     = 1;
+    required string     name    = 2;
+};
+
+message Pokemon {
+    required int32      id              = 1;
+    required string     num             = 2;
+    required string     name            = 3;
+    required string     img             = 4;
+    required string     type            = 5;
+    required string     height          = 6;
+    required string     weight          = 7;
+    required string     candy           = 8;
+    required string     egg             = 9;
+    repeated string     weaknesses      = 10;
+    repeated Evolution  prev_evolution  = 11;
+    repeated Evolution  next_evolution  = 12;
+};
+
+message Pokedex {
+    repeated Pokemon pokemon = 1;
+};
+

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="actions_use_json">Use json</string>
+    <string name="actions_use_protobuf">Use protobuf</string>
+    <string name="actions_performance_test">Performance Test</string>
+</resources>

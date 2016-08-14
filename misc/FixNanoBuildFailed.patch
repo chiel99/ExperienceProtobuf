@@ -1,0 +1,17 @@
+diff --git a/java/src/test/java/com/google/protobuf/NanoTest.java b/java/src/test/java/com/google/protobuf/NanoTest.java
+index 42b1793..b3e442f 100644
+--- a/java/src/test/java/com/google/protobuf/NanoTest.java
++++ b/java/src/test/java/com/google/protobuf/NanoTest.java
+@@ -3185,10 +3185,10 @@ public class NanoTest extends TestCase {
+     message.value = false;
+ 
+     byte[] bytes = MessageNano.toByteArray(message);
+-    int extraFieldSize = CodedOutputStream.computeStringSize(1001, "This is an unknown field");
++    int extraFieldSize = CodedOutputByteBufferNano.computeStringSize(1001, "This is an unknown field");
+     byte[] newBytes = new byte[bytes.length + extraFieldSize];
+     System.arraycopy(bytes, 0, newBytes, 0, bytes.length);
+-    CodedOutputStream.newInstance(newBytes, bytes.length, extraFieldSize).writeString(1001,
++    CodedOutputByteBufferNano.newInstance(newBytes, bytes.length, extraFieldSize).writeString(1001,
+         "This is an unknown field");
+ 
+     // Deserialize with an unknown field.
