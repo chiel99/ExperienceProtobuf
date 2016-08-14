@@ -88,7 +88,7 @@ $ mv target/protobuf-java-2.6.1.jar target/protobuf-java-nano-2.6.1.jar
 
 ```sh
 
-// I personally recommanded micro version for android app
+# I personally recommanded micro version for android app
 $ cp target/protobuf-java-micro-2.6.1.jar <AppRoot>/app/libs/
 
 ```
